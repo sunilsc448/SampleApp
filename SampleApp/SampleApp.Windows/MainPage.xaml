@@ -34,4 +34,12 @@
         </GridView>
         <Button Grid.Row="1" Content="{Binding Content}" Command="{Binding btnCmd_viewMore}"/>
     </Grid>
+    
+    <Page.TopAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Save" Click="Button_Click"/>
+            <AppBarButton Icon="Read" Click="Button_Click_1"/>
+        </CommandBar>
+    </Page.TopAppBar>
+    
 </Page>

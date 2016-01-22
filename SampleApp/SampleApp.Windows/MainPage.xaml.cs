@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -37,11 +38,15 @@ namespace SampleApp
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             await StorageHelper.WriteFileAsync<Dictionary<string, SampleModel>>("myDict", dict_, StorageHelper.StorageLocation.Local);
+            MessageDialog msgDlg = new MessageDialog("File Saved Successfully. " + dict_.Count+" items received");
+            await msgDlg.ShowAsync();
         }
 
         private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Dictionary<string, SampleModel> dict_retrieved = await StorageHelper.ReadFileAsync<Dictionary<string, SampleModel>>("myDict", StorageHelper.StorageLocation.Local);
+            MessageDialog msgDlg = new MessageDialog("File Retrieved Successfully. " + dict_retrieved.Count+" items received");
+            await msgDlg.ShowAsync();
         }
     }
 
