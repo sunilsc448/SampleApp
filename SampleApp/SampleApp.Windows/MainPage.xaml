@@ -20,7 +20,7 @@
         </DataTemplate>
     </Page.Resources>
 
-    <Grid Background="Yellow" Opacity="0.9">
+    <Grid  Opacity="0.9">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="50"/>
