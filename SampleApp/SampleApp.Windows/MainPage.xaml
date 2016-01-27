@@ -36,7 +36,7 @@
     </Grid>
     
     <Page.TopAppBar>
-        <CommandBar>
+        <CommandBar Background="LightBlue">
             <AppBarButton Icon="Save" Click="Button_Click"/>
             <AppBarButton Icon="Read" Click="Button_Click_1"/>
         </CommandBar>
